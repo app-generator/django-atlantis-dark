@@ -67,7 +67,7 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 
 ## Credits & Links
 
-- [Django Dashboard Atlantis Dark](https://www.youtube.com/watch?v=czv4Ww6rjMU) - yTube presentation
+- [Django Dashboard Atlantis Dark](https://www.youtube.com/watch?v=wqyAVW_m6lk) - yTube presentation
 - [Django Framework](https://www.djangoproject.com/) - Offcial website
 - [Django Admin Dashboards](https://appseed.us/admin-dashboards/django) - Open-source and paid admin panels coded in **Django**
 
