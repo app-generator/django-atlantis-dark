@@ -1,4 +1,4 @@
-# [Django Dashboard Atlantis Dark](https://www.youtube.com/watch?v=wqyAVW_m6lk)
+# [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
 
 **Open-Source Admin Panel** coded in **Django Framework** on top of **Atlantis Dark Dashboard** design. **Features**:
 
@@ -80,4 +80,4 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 <br />
 
 ---
-[Django Dashboard Atlantis Dark](https://www.youtube.com/watch?v=wqyAVW_m6lk) - provided by **AppSeed**
+[Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - provided by **AppSeed**
