@@ -36,12 +36,26 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">
+                            <span>Login</span>
+                        </div>
+                    </div>
 
-                            {% if msg %}
-                                <span class="text-danger">{{ msg | safe }}</span>
-                            {% else %}
-                                <span>Login</span>
-                            {% endif %}
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+
+                        {% if msg %}
+                            <p style="margin-left: 25px">
+                                {{ msg | safe }}
+                            </p>
+                        {% else %}
+                            <p style="margin-left: 25px">    
+                                Use default credentials: test / ApS12_ZZs8
+                                <br />
+                                OR <a href={% url 'register' %} >create your own user</a>
+                            </p>
+                        {% endif %}
 
                         </div>
                     </div>
