@@ -43,8 +43,8 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-argon.git
-$ cd django-dashboard-argon
+$ git clone https://github.com/app-generator/django-dashboard-atlantis-dark.git
+$ cd django-dashboard-atlantis-dark
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv --no-site-packages env
@@ -81,8 +81,8 @@ The app is provided with a basic configuration to be executed in [Heroku](https:
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-argon.git
-$ cd django-dashboard-argon
+$ git clone https://github.com/app-generator/django-dashboard-atlantis-dark.git
+$ cd django-dashboard-atlantis-dark
 $
 $ # Heroku Login
 $ heroku login
@@ -117,8 +117,8 @@ The application can be easily executed in a docker container. The steps:
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-dashboard-argon.git
-$ cd django-dashboard-argon
+$ git clone https://github.com/app-generator/django-dashboard-atlantis-dark.git
+$ cd django-dashboard-atlantis-dark
 ```
 
 > Start the app in Docker
@@ -196,4 +196,4 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
-[Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-argon) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
