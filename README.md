@@ -8,7 +8,7 @@
 - Modular design
 - Session-Based authentication (login, register)
 - Forms validation
-- UI Kit: **Atlantis Dark Dashboard** (Free Version) by **Creative-Tim**
+- UI Kit: **Atlantis Dark Dashboard** (Free Version) by [ThemeKita](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html)
 
 ### Deployment Scripts
 
@@ -20,7 +20,8 @@
 ### Web App Links
 
 - [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - product page 
-- [Django Dashboard Atlantis Dark](https://django-dashboard-atln-dark.herokuapp.com/) - LIVE Demo
+- [Django Dashboard Atlantis Dark](https://django-dashboard-atlantis-dark.appseed.us/login/) - LIVE Demo
+- [Django Dashboard Atlantis Dark](https://www.youtube.com/watch?v=wqyAVW_m6lk) - yTube presentation
 
 <br />
 
@@ -183,7 +184,6 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 ## Credits
 
-- [Django Dashboard Atlantis Dark](https://www.youtube.com/watch?v=wqyAVW_m6lk) - yTube presentation
 - [Django Framework](https://www.djangoproject.com/) - Offcial website
 - [Django Admin Dashboards](https://appseed.us/admin-dashboards/django) - Open-source and paid admin panels coded in **Django**
 
