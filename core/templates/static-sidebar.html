@@ -1,9 +1,8 @@
+{% extends "layouts/base-static.html" %}
 
-{% extends "layouts/default.html" %}
+{% block title %} Static Sidebar {% endblock title %}
 
-{% block title %} Overlay Sidebar {% endblock title %}
-
-{% block layout %} overlay-sidebar {% endblock layout %}
+{% block layout %} static-sidebar {% endblock layout %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -514,7 +513,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-month" data-toggle="pill" href="#pills-month" role="tab" aria-selected="false">Month</a>
                                     </li>
-        </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -593,7 +592,7 @@
 
 {% block javascripts %}
 
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo.js"></script>
 	<script src="/static/assets/js/demo.js"></script>
 	<script>
 		$('#lineChart').sparkline([102,109,120,99,110,105,115], {

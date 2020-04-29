@@ -1,7 +1,8 @@
+{% extends "layouts/base.html" %}
 
-{% extends "layouts/default.html" %}
+{% block title %} Icon Menu {% endblock title %}
 
-{% block title %} Sidebar Style 1 {% endblock title %}
+{% block layout %} sidebar_minimize {% endblock layout %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -23,47 +24,77 @@
         </div>
     </div>
     <div class="page-inner mt--5">
-        <div class="row mt--2">
-            <div class="col-md-6">
-                <div class="card full-height">
-                    <div class="card-body">
-                        <div class="card-title">Overall statistics</div>
-                        <div class="card-category">Daily information about statistics in system</div>
-                        <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
-                            <div class="px-2 pb-2 pb-md-0 text-center">
-                                <div id="circles-1"></div>
-                                <h6 class="fw-bold mt-3 mb-0">New Users</h6>
+        <div class="row row-card-no-pd mt--2">
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="flaticon-chart-pie text-warning"></i>
+                                </div>
                             </div>
-                            <div class="px-2 pb-2 pb-md-0 text-center">
-                                <div id="circles-2"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Sales</h6>
-                            </div>
-                            <div class="px-2 pb-2 pb-md-0 text-center">
-                                <div id="circles-3"></div>
-                                <h6 class="fw-bold mt-3 mb-0">Subscribers</h6>
+                            <div class="col-7 col-stats">
+                                <div class="numbers">
+                                    <p class="card-category">Number</p>
+                                    <h4 class="card-title">150GB</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card full-height">
-                    <div class="card-body">
-                        <div class="card-title">Total income & spend statistics</div>
-                        <div class="row py-3">
-                            <div class="col-md-4 d-flex flex-column justify-content-around">
-                                <div>
-                                    <h6 class="fw-bold text-uppercase text-success op-8">Total Income</h6>
-                                    <h3 class="fw-bold">$9.782</h3>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold text-uppercase text-danger op-8">Total Spend</h6>
-                                    <h3 class="fw-bold">$1,248</h3>
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="flaticon-coins text-success"></i>
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <div id="chart-container">
-                                    <canvas id="totalIncomeChart"></canvas>
+                            <div class="col-7 col-stats">
+                                <div class="numbers">
+                                    <p class="card-category">Revenue</p>
+                                    <h4 class="card-title">$ 1,345</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="flaticon-error text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-stats">
+                                <div class="numbers">
+                                    <p class="card-category">Errors</p>
+                                    <h4 class="card-title">23</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="flaticon-twitter text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 col-stats">
+                                <div class="numbers">
+                                    <p class="card-category">Followers</p>
+                                    <h4 class="card-title">+45K</h4>
                                 </div>
                             </div>
                         </div>
@@ -116,13 +147,47 @@
                         </div>
                     </div>
                 </div>
+                <div class="card card-primary bg-primary-gradient">
+                    <div class="card-body">
+                        <h4 class="mb-1 fw-bold">Tasks Progress</h4>
+                        <div id="task-complete" class="chart-circle mt-4 mb-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-0">
+                        <div class="h1 fw-bold float-right text-primary">+5%</div>
+                        <h2 class="mb-2">17</h2>
+                        <p class="text-muted">Users online</p>
+                        <div class="pull-in sparkline-fix">
+                            <div id="lineChart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-0">
+                        <div class="h1 fw-bold float-right text-danger">-3%</div>
+                        <h2 class="mb-2">27</h2>
+                        <p class="text-muted">New Users</p>
+                        <div class="pull-in sparkline-fix">
+                            <div id="lineChart2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body pb-0">
                         <div class="h1 fw-bold float-right text-warning">+7%</div>
                         <h2 class="mb-2">213</h2>
                         <p class="text-muted">Transactions</p>
                         <div class="pull-in sparkline-fix">
-                            <div id="lineChart"></div>
+                            <div id="lineChart3"></div>
                         </div>
                     </div>
                 </div>
@@ -132,7 +197,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-head-row card-tools-still-right">
+                        <div class="card-head-row">
                             <h4 class="card-title">Users Geolocation</h4>
                             <div class="card-tools">
                                 <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
@@ -398,7 +463,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="card full-height">
+                <div class="card">
                     <div class="card-header">
                         <div class="card-title">Feed Activity</div>
                     </div>
@@ -433,7 +498,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card full-height">
+                <div class="card">
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Support Tickets</div>
@@ -530,91 +595,25 @@
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="/static/assets/js/demo.js"></script>
 	<script>
-		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
-			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-2',
-			radius:45,
-			value:70,
-			maxValue:100,
-			width:7,
-			text: 36,
-			colors:['#f1f1f1', '#2BB930'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-3',
-			radius:45,
-			value:40,
-			maxValue:100,
-			width:7,
-			text: 12,
-			colors:['#f1f1f1', '#F25961'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
-
-		var mytotalIncomeChart = new Chart(totalIncomeChart, {
-			type: 'bar',
-			data: {
-				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-				datasets : [{
-					label: "Total Income",
-					backgroundColor: '#ff9e27',
-					borderColor: 'rgb(23, 125, 255)',
-					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
-				}],
-			},
-			options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				legend: {
-					display: false,
-				},
-				scales: {
-					yAxes: [{
-						ticks: {
-							display: false //this will remove only the label
-						},
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}],
-					xAxes : [ {
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}]
-				},
-			}
+		$('#lineChart').sparkline([102,109,120,99,110,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#177dff',
+			fillColor: 'rgba(23, 125, 255, 0.14)'
 		});
 
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+		$('#lineChart2').sparkline([99,125,122,105,110,124,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#f3545d',
+			fillColor: 'rgba(243, 84, 93, .14)'
+		});
+
+		$('#lineChart3').sparkline([105,103,123,100,95,105,115], {
 			type: 'line',
 			height: '70',
 			width: '100%',
@@ -622,6 +621,7 @@
 			lineColor: '#ffa534',
 			fillColor: 'rgba(255, 165, 52, .14)'
 		});
-	</script>    
+	</script>
 
 {% endblock javascripts %}
+
