@@ -1,4 +1,4 @@
-# [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
+# [Django Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
@@ -161,4 +161,4 @@ A dashboard is a set of pages that are easy to read and offer information to the
 <br />
 
 ---
-**[Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Django Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
