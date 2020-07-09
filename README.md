@@ -32,7 +32,7 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 <br />
 <br />
 
-![Django Dashboard Atlantis Dark - Open-Source Web App.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-atlantis-dark-screen.png)
+![Django Dashboard Atlantis Dark - Open-Source Web App, the main screen.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-atlantis-dark-screen.png)
 
 <br />
 
