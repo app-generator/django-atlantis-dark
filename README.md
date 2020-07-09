@@ -1,8 +1,8 @@
-# [Django Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
+# [Django Dashboard - Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
-- UI Kit: **[Atlantis Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** (Free version) provided by **ThemeKita**
+- UI Kit: Atlantis Dashboard (Free version) - design by ThemeKita
 - UI-Ready app, SQLite Database, Django Native ORM
 - Modular design, clean code-base
 - Session-Based Authentication, Forms validation
@@ -16,7 +16,7 @@
 - [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Product page
 - [Django Dashboard Atlantis Dark](https://django-dashboard-atlantis-dark.appseed.us/login/) - LIVE Demo
 - [Django Dashboard Atlantis Dark](https://docs.appseed.us/admin-dashboards/django-dashboard-atlantis-dark/) - Documentation
-- More [Django Admin Dashboards](https://appseed.us/admin-dashboards/django) - index hosted by **AppSeed**
+- More [Django Dashboards](https://appseed.us/admin-dashboards/django) - index hosted by **AppSeed**
 - [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
 
 <br />
@@ -161,4 +161,4 @@ A dashboard is a set of pages that are easy to read and offer information to the
 <br />
 
 ---
-[Django Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Django Dashboard - Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
