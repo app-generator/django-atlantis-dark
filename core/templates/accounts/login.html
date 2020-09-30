@@ -36,26 +36,14 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>Login</span>
-                        </div>
-                    </div>
 
-                    <br />
-
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-
-                        {% if msg %}
-                            <p style="margin-left: 25px">
-                                {{ msg | safe }}
-                            </p>
-                        {% else %}
-                            <p style="margin-left: 25px">    
-                                Use default credentials: test / ApS12_ZZs8
-                                <br />
-                                OR <a href={% url 'register' %} >create your own user</a>
-                            </p>
-                        {% endif %}
+                            {% if msg %}
+                                <span class="text-danger">{{ msg | safe }}</span>
+                            {% else %}
+                            <span>
+                                Add your credentials
+                            </span>
+                            {% endif %}
 
                         </div>
                     </div>
@@ -96,7 +84,7 @@
                         <div class="card-action">
                             <button type="submit" class="btn btn-success">Submit</button>
                             &nbsp; &nbsp;
-                            <span>Not a member?</span> Please <a href={% url 'register' %} >Register</a>
+                            <span>Not a member?</span> Please <a href="{% url 'register' %}" >Register</a>
                         </div>
 
                     </form>

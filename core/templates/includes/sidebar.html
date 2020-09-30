@@ -1,11 +1,9 @@
-
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2" data-background-color="dark2">
-					
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
-				
-					{% if user.is_authenticated %}
+
+					{% if request.user.is_authenticated %}
 						<div class="user">
 							<div class="avatar-sm float-left mr-2">
 								<img src="/static/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
@@ -13,10 +11,8 @@
 							<div class="info">
 								<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 									<span>
-										{{ request.user.user }}
-										<span class="user-level">
-											{{ request.user.email }}  
-										</span>
+										{{ request.user.username }}
+										<span class="user-level">{{ request.user.email }} </span>
 										<span class="caret"></span>
 									</span>
 								</a>
@@ -30,7 +26,7 @@
 											</a>
 										</li>
 										<li>
-											<a href={% url 'logout' %}>
+											<a href="{% url 'logout' %}" >
 												<span class="link-collapse">Logout</span>
 											</a>
 										</li>
@@ -48,8 +44,8 @@
 								<div class="collapse" id="dashboard">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/">
-												<span class="sub-item">Dashboard 1</span>
+											<a href="/index.html">
+												<span class="sub-item">Dashboard</span>
 											</a>
 										</li>
 									</ul>
@@ -70,52 +66,52 @@
 								<div class="collapse" id="base">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/avatars.html">
+											<a href="/ui-avatars.html">
 												<span class="sub-item">Avatars</span>
 											</a>
 										</li>
 										<li>
-											<a href="/buttons.html">
+											<a href="/ui-buttons.html">
 												<span class="sub-item">Buttons</span>
 											</a>
 										</li>
 										<li>
-											<a href="/gridsystem.html">
+											<a href="/ui-gridsystem.html">
 												<span class="sub-item">Grid System</span>
 											</a>
 										</li>
 										<li>
-											<a href="/panels.html">
+											<a href="/ui-panels.html">
 												<span class="sub-item">Panels</span>
 											</a>
 										</li>
 										<li>
-											<a href="/notifications.html">
+											<a href="/ui-notifications.html">
 												<span class="sub-item">Notifications</span>
 											</a>
 										</li>
 										<li>
-											<a href="/sweetalert.html">
+											<a href="/ui-sweetalert.html">
 												<span class="sub-item">Sweet Alert</span>
 											</a>
 										</li>
 										<li>
-											<a href="/font-awesome-icons.html">
+											<a href="/icons-fontawesome.html">
 												<span class="sub-item">Font Awesome Icons</span>
 											</a>
 										</li>
 										<li>
-											<a href="/simple-line-icons.html">
+											<a href="/icons-simpleline.html">
 												<span class="sub-item">Simple Line Icons</span>
 											</a>
 										</li>
 										<li>
-											<a href="/flaticons.html">
+											<a href="/icons-flaticons.html">
 												<span class="sub-item">Flaticons</span>
 											</a>
 										</li>
 										<li>
-											<a href="/typography.html">
+											<a href="/ui-typography.html">
 												<span class="sub-item">Typography</span>
 											</a>
 										</li>
@@ -131,27 +127,27 @@
 								<div class="collapse" id="sidebarLayouts">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/sidebar-style-1.html">
+											<a href="/layout-sidebar-style-1.html">
 												<span class="sub-item">Sidebar Style 1</span>
 											</a>
 										</li>
 										<li>
-											<a href="/overlay-sidebar.html">
+											<a href="/layout-overlay-sidebar.html">
 												<span class="sub-item">Overlay Sidebar</span>
 											</a>
 										</li>
 										<li>
-											<a href="/compact-sidebar.html">
+											<a href="/layout-compact-sidebar.html">
 												<span class="sub-item">Compact Sidebar</span>
 											</a>
 										</li>
 										<li>
-											<a href="/static-sidebar.html">
+											<a href="/layout-static-sidebar.html">
 												<span class="sub-item">Static Sidebar</span>
 											</a>
 										</li>
 										<li>
-											<a href="/icon-menu.html">
+											<a href="/layout-icon-menu.html">
 												<span class="sub-item">Icon Menu</span>
 											</a>
 										</li>
@@ -167,7 +163,7 @@
 								<div class="collapse" id="forms">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/forms.html">
+											<a href="/ui-forms.html">
 												<span class="sub-item">Basic Form</span>
 											</a>
 										</li>
@@ -183,12 +179,12 @@
 								<div class="collapse" id="tables">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/tables.html">
+											<a href="/ui-tables.html">
 												<span class="sub-item">Basic Table</span>
 											</a>
 										</li>
 										<li>
-											<a href="/datatables.html">
+											<a href="/ui-datatables.html">
 												<span class="sub-item">Datatables</span>
 											</a>
 										</li>
@@ -204,7 +200,7 @@
 								<div class="collapse" id="maps">
 									<ul class="nav nav-collapse">
 										<li>
-											<a href="/jqvmap.html">
+											<a href="/maps-jqvmap.html">
 												<span class="sub-item">JQVMap</span>
 											</a>
 										</li>
@@ -225,7 +221,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="/sparkline.html">
+											<a href="/charts-sparkline.html">
 												<span class="sub-item">Sparkline</span>
 											</a>
 										</li>
@@ -292,11 +288,11 @@
 							</li>
 							<li class="mx-4 mt-2">
 								<a  target="_blank"
-								    href="https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro" 
+									href="https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro" 
 										class="btn btn-primary btn-block">
 										<span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>PRO Version</a> 
 							</li>
-						</ul>					
+						</ul>
 					{% else %}
 						<ul class="nav nav-primary">
 							<li class="mx-4 mt-2">
@@ -311,4 +307,5 @@
 				</div>
 			</div>
 		</div>
-		<!-- End Sidebar -->
+        <!-- End Sidebar -->
+        

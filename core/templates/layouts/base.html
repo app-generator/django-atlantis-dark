@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	
+
 	<title>
-		Django Dashboard Atlantis Dark - {% block title %}{% endblock %} | AppSeed 
-	</title>
+        Django Atlantis Dark - {% block title %}{% endblock %} | AppSeed
+    </title>
 
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="/static/assets/img/icon.ico" type="image/x-icon"/>
@@ -31,38 +30,38 @@
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/static/assets/css/demo.css">
 
-    <!-- Specific CSS goes HERE -->
+    <!-- Specific Page CSS goes HERE  -->
     {% block stylesheets %}{% endblock stylesheets %}
 
 </head>
 <body data-background-color="dark">
+	<div class="wrapper">
 
-	<div class="wrapper {% block layout %}{% endblock layout %}">
+        {% include 'includes/navigation.html' %}
 
-		{% include 'includes/navigation.html' %}
-
-		{% include 'includes/sidenav.html' %}
+        {% include 'includes/sidebar.html' %}
 
 		<div class="main-panel">
-
-			<div class="content">
-
-				{% block content %}{% endblock content %}
 			
-			</div>
+			{% block content %}{% endblock content %}
 
 			{% include 'includes/footer.html' %}
 
 		</div>
 		
-		{% include 'includes/aside-settings.html' %}
+		{% if request.user.is_authenticated %}
 
+			<!-- Custom template | don't include it in your project! -->
+			{% include 'includes/configuration-plugin.html' %}
+
+		{% endif %}
+		
 	</div>
 
 	{% include 'includes/scripts.html' %}
 
-	<!-- Specific JS goes HERE -->
+    <!-- Specific Page JS goes HERE  -->
     {% block javascripts %}{% endblock javascripts %}
-	
+
 </body>
 </html>
