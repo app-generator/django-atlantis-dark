@@ -18,8 +18,8 @@ Atlantis Lite (Dark Design) is a free bootstrap 4 admin dashboard that is beauti
 
 > Links
 
-- [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Product page
-- [Django Dashboard Atlantis Dark - Demo](https://django-dashboard-atlantis-dark.appseed.us/) - LIVE Deployment
+- [Django Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Product page
+- [Django Atlantis Dark - Demo](https://django-atlantis-dark.appseed-srv1.com/) - LIVE Deployment
 
 <br />
 
