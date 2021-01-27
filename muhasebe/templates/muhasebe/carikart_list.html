@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+{% load render_table from django_tables2 %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block title %} UI Datatables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+
+<link href="{% static 'ajax_datatable/css/style.css' %}" rel="stylesheet" />
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<div class="page-header">
+				<h4 class="page-title">Cari Kart</h4>
+				<ul class="breadcrumbs">
+					<li class="nav-home">
+						<a href="#">
+							<i class="flaticon-home"></i>
+						</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Muhasebe</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Cari Kart</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-title">Liste</h4>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<!--
+								<table id="datatable_cari_kart" class="display table table-striped table-hover">
+								</table>
+								-->
+								{% if filter %}
+									<form action="" method="get" class="form form-inline">
+										{% bootstrap_form filter.form layout='inline' %}
+										{% bootstrap_button 'filter' %}
+									</form>
+								{% endif %}
+
+
+
+								{% render_table table %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

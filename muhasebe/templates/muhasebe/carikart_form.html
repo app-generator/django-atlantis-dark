@@ -1,0 +1,149 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<div class="page-header">
+				<h4 class="page-title">Forms</h4>
+				<ul class="breadcrumbs">
+					<li class="nav-home">
+						<a href="#">
+							<i class="flaticon-home"></i>
+						</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Forms</a>
+					</li>
+					<li class="separator">
+						<i class="flaticon-right-arrow"></i>
+					</li>
+					<li class="nav-item">
+						<a href="#">Basic Form</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Form Elements</div>
+                        </div>
+                        <form method="post">{% csrf_token %}
+						<div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    {{ form.cari_kodu|as_crispy_field }}
+                                </div>
+                                <div class="col-9">
+                                    {{ form.ad|as_crispy_field }}
+                                </div>
+                                <div class="col-6">
+                                    {{ form.adres|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.ilce|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.sehir|as_crispy_field }}
+                                </div>
+                                <div class="col-6">
+                                    {{ form.eposta|as_crispy_field }}
+                                </div>
+                                <div class="col-6">
+                                    {{ form.web_adresi|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.telefon_1|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.telefon_2|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.gsm_1|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.gsm_2|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.acik_hesap_limiti|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.vergi_dairesi|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.vergi_numarasi|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.tc_kimlik_numarasi|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.yetkili_adi|as_crispy_field }}
+                                </div>
+                                <div class="col-3">
+                                    {{ form.aktif_pasif|as_crispy_field }}
+                                </div>
+                                <div class="col-6">
+                                    {{ form.aciklama|as_crispy_field }}
+                                </div>
+                                <div class="col-12">
+                                    {{ form.cari_grup|as_crispy_field }}
+                                </div>
+                                
+                            </div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-success">Submit</button>
+							<button class="btn btn-danger">Cancel</button>
+                        </div>
+                    </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="/static/assets/js/setting-demo2.js"></script>
+
+{% endblock javascripts %}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

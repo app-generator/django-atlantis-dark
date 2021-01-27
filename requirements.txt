@@ -9,3 +9,11 @@ dj-database-url
 python-decouple
 gunicorn
 whitenoise
+django-tenants
+psycopg2-binary
+django-crispy-forms
+django-tables2
+django-filter
+django-bootstrap4
+django-phonenumber-field[phonenumbers]
+tablib

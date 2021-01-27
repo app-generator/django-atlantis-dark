@@ -60,6 +60,22 @@
 							<h4 class="text-section">Components</h4>
 						</li>
 						<li class="nav-item {% if 'ui-' in segment %} active {% endif %}">
+							<a data-toggle="collapse" href="#muhasebe">
+								<i class="fas fa-layer-group"></i>
+								<p>Muhasebe</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="muhasebe">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="{% url 'muhasebe:cari_kart' %}">
+											<span class="sub-item">Cari Kart</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item {% if 'ui-' in segment %} active {% endif %}">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-layer-group"></i>
 								<p>Base</p>
