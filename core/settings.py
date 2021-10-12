@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.app'  # Enable the inner app
+    'apps.home'  # Enable the inner home (home)
 ]
 
 MIDDLEWARE = [
@@ -44,9 +44,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
-LOGIN_REDIRECT_URL = "home"  # Route defined in app/urls.py
-LOGOUT_REDIRECT_URL = "home"  # Route defined in app/urls.py
-TEMPLATE_DIR = os.path.join(CORE_DIR, "core/templates")  # ROOT dir for templates
+LOGIN_REDIRECT_URL = "home"  # Route defined in home/urls.py
+LOGOUT_REDIRECT_URL = "home"  # Route defined in home/urls.py
+TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
 
 TEMPLATES = [
     {
@@ -117,16 +117,9 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(CORE_DIR, 'core/static'),
+    os.path.join(CORE_DIR, 'apps/static'),
 )
 
-# Email Backend configurations
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = config("EMAIL_HOST", default="")
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
 #############################################################
 #############################################################
