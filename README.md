@@ -45,7 +45,7 @@ Visit `http://localhost:85` in your browser. The app should be up & running.
 
 <br />
 
-![Django Dashboard Atlantis - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/django-dashboard-atlantis-dark/master/media/django-dashboard-atlantis-dark-screen.png)
+![Django Dashboard Atlantis - Template project provided by AppSeed.](https://user-images.githubusercontent.com/51070104/140785360-828707d1-28ce-491f-b731-5c895c14c2e2.gif)
 
 <br />
 
