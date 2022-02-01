@@ -181,14 +181,23 @@
 							<div class="collapse" id="tables">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="/tables-simple.html">
-											<span class="sub-item">Basic Table</span>
+										<a href="{% url 'store' %}">
+											<span class="sub-item">Upload</span>
 										</a>
 									</li>
 									<li>
-										<a href="/tables-data.html">
-											<span class="sub-item">Datatables</span>
+										<ul class="nav nav-collapse">
+										<li>
+										<a href="{% url 'tables' %}">
+											<span class="sub-item">Tests</span>
 										</a>
+										</li>
+										<li>
+											<a href="{% url 'apitables' %}">
+												<span class="sub-item">Api Case</span>
+											</a>
+										</li>
+										</ul>
 									</li>
 								</ul>
 							</div>

@@ -43,41 +43,45 @@
 								<thead>
 									<tr>
 										<th>sl_no</th>
-										<th>d_s</th>
-										<th>pre_req</th>
-										<th>t_scenario</th>
-										<th>exp_result</th>
-										<th>exp_plat</th>
-										<th>a_exe</th>
-										<th>b_status</th>
-										<th>c_date</th>
-										<th>d_owner</th>
-										<th>e_id</th>
-										<th>f_auto</th>
-										<th>g_own</th>
-										<th>h_poc</th>
-										<th>i_comm</th>
+										<th>api_type</th>
+										<th>priority</th>
+										<th>Dependencies</th>
+										<th>Description</th>
+										<th>service_name</th>
+										<th>owner_poc</th>
+										<th>mock_link</th>
+										<th>curl</th>
+										<th>dependent_services</th>
+										<th>dependent_spoc</th>
+										<th>dev_status</th>
+										<th>open_q</th>
+										<th>status</th>
+										<th>test_owner</th>
+                                        <th>jira</th>
+                                        <th>i_comm</th>
 									</tr>
 								</thead>
 							
 								<tbody>
-										{%for test in tests%}
+										{%for api in apis%}
 										<tr>
-										<td>{{test.sl_no}}</td>
-										<td>{{test.d_s}}</td>
-										<td>{{test.pre_req}}</td>
-										<td>{{test.t_scenario}}</td>
-										<td>{{test.exp_result}}</td>
-										<td>{{test.exp_plat}}</td>
-										<td>{{test.a_exe}}</td>
-										<td>{{test.b_status}}</td>
-										<td>{{test.c_date}}</td>
-										<td>{{test.d_owner}}</td>
-										<td>{{test.e_id}}</td>
-										<td>{{test.f_auto}}</td>
-										<td>{{test.g_own}}</td>
-										<td>{{test.h_poc}}</td>
-										<td>{{test.i_comm}}</td>
+										<td>{{api.sl_no}}</td>
+										<td>{{api.api_type}}</td>
+										<td>{{api.priority}}</td>
+										<td>{{api.Dependencies}}</td>
+										<td>{{api.Description}}</td>
+										<td>{{api.service_name}}</td>
+										<td>{{api.owner_poc}}</td>
+										<td>{{api.mock_link}}</td>
+										<td>{{api.curl}}</td>
+										<td>{{api.dependent_services}}</td>
+										<td>{{api.dependent_spoc}}</td>
+										<td>{{api.dev_status}}</td>
+										<td>{{api.open_q}}</td>
+										<td>{{api.status}}</td>
+										<td>{{api.test_owner}}</td>
+                                        <td>{{api.jira}}</td>
+                                        <td>{{api.i_comm}}</td>
 									</tr>		
 									{%endfor%}
 								</tbody>

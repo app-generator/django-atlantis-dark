@@ -1,0 +1,66 @@
+
+    {% extends "layouts/base.html" %}
+
+    {% block title %} UI Forms {% endblock %} 
+    
+    <!-- Specific Page CSS goes HERE  -->
+    {% block stylesheets %}{% endblock stylesheets %}
+    
+    {% block content %}
+    <div class="content">
+        <div class="page-inner">
+            <div class="page-header">
+                <h4 class="page-title">DataTables.Net</h4>
+                <ul class="breadcrumbs">
+                    <li class="nav-home">
+                        <a href="#">
+                            <i class="flaticon-home"></i>
+                        </a>
+                    </li>
+                    <li class="separator">
+                        <i class="flaticon-right-arrow"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Tables</a>
+                    </li>
+                    <li class="separator">
+                        <i class="flaticon-right-arrow"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Datatables</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Basic</h4>
+                        </div>
+                        <div class="card-body">
+    <form action="{% url 'store' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group mb-4 mt-3">
+            
+            <label for="exampleFormControlFile1">Excel file ONLY !</label>
+            <input type="file" title="Upload excel file" name="file"
+     class="form-control-file" id="exampleFormControlFile1" required="required">
+        </div>
+        <input type="submit" value="Upload" name="time" class="mt-4 mb-4 btn btn-primary">
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    {% endblock content %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}
+    
+        <!-- Atlantis DEMO methods, don't include it in your project! -->
+        <script src="/static/assets/js/setting-demo2.js"></script>
+    
+    {% endblock javascripts %}	
+    
