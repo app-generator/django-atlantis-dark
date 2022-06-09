@@ -1,0 +1,23 @@
+{
+    "backend": "django",
+    "db_name": "",
+    "db_pass": "",
+    "db_type": "sqlite",
+    "db_user": "",
+    "dbms": "1",
+    "description": "generated product",
+    "design": "atlantis-dark",
+    "docker": "1",
+    "err_code": 0,
+    "frontend": "",
+    "heroku": "0",
+    "pattern": "mvc",
+    "pro": "0",
+    "task_id": "a741cc37-840e-4db2-9a00-48940e4c796c",
+    "task_info": "Task is finished",
+    "task_output": "a741cc37-840e-4db2-9a00-48940e4c796c.zip",
+    "task_result": "SUCCESS",
+    "task_state": "FINISHED",
+    "task_ts_end": "2022-06-09-12-04-47",
+    "task_ts_start": "2022-06-09-12-04-16"
+}
