@@ -1,0 +1,8 @@
+django
+gunicorn
+python-dotenv
+whitenoise
+django-admin-atlantis==1.0.0
+
+# psycopg2-binary
+# mysqlclient
