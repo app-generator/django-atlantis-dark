@@ -1,13 +1,18 @@
 # Change Log
 
+## [1.0.6] 2023-06-20
+### Changes
+
+- Added theme-based pattern
+
 ## [1.0.5] 2021-06-09
-### Improvements
+### Changes
 
 - Built with [Atlantis Dark Generator](https://appseed.us/generator/atlantis-dark/)
   - Timestamp: `2022-06-09 12:04`
 
 ## [1.0.4] 2022-01-16
-### Improvements
+### Changes
 
 - Bump Django Codebase to [v2stable.0.1](https://github.com/app-generator/boilerplate-code-django-dashboard/releases)
 - Dependencies update (all packages) 
