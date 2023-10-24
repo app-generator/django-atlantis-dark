@@ -5,7 +5,6 @@ an open-source admin template crafted by ThemeKita agency. It comes with the bas
 
 - 👉 [Atlantis Dark Django](https://appseed.us/product/atlantis-dark/django/) - `Product page`
 - 👉 [Atlantis Dark Django](https://django-atlantis-dark.appseed-srv1.com/) - `LIVE Demo`
-- 🛒 **[Django AtlantisDark PRO]()** - `Premium Version`
 
 ---
 
