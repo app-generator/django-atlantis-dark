@@ -12,7 +12,7 @@ an open-source admin template crafted by ThemeKita agency. It comes with the bas
 
 > `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
 
-| Free Version                          | [PRO Version](https://appseed.us/product/atlantis-dark-pro/django/)    [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/) 
+| Free Version                          | [PRO Version](https://appseed.us/product/atlantis-dark-pro/django/)   | [Custom Development](https://appseed.us/custom-development/) | 
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ **Django 4.1.12**                   | **Everything in Free**, plus:                                        | **Everything in PRO**, plus:         |
 | ✓ Best Practices                      | ✅ **Premium Bootstrap Design**                                      | ✅ **1mo Custom Development**       | 
