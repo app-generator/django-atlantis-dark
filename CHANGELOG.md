@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.0.8] 2024-11-27
+### Changes
+
+> Update RM Links
+
+- 👉 [Django Atlantis Dark](https://app-generator.dev/product/atlantis-dark/django/) - `Product Page`
+- 👉 [Django Atlantis Dark](https://app-generator.dev/docs/products/django/atlantis-dark/index.html) - `Complete Information` and Support Links
+  - [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - a `comprehensive tutorial`
+  - `Configuration`: Install Dependencies, Prepare Environment, Setting up the Database 
+  - `Start with Docker`
+  - `Manual Build`
+  - `Start the project`
+  - `Deploy on Render`
+
 ## [1.0.7] 2023-10-24
 ### Changes
 
