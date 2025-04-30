@@ -1,0 +1,66 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block sidebar_class %}
+	sidebar sidebar-style-2
+{% endblock sidebar_class %}
+
+{% block title %} {% if page_title %} page_title {% else %} Dynamic DataTables {% endif %} {% endblock title %} 
+
+{% block content %}
+
+<div class="content">
+    <div class="page-inner">
+
+        <div class="page-header">
+			<h4 class="page-title">Dynamic DT</h4>
+			<ul class="breadcrumbs">
+				<li class="nav-home">
+					<a href="#">
+						<i class="flaticon-home"></i>
+					</a>
+				</li>
+				<li class="separator">
+					<i class="flaticon-right-arrow"></i>
+				</li>
+				<li class="nav-item">
+					<a href="/">Home</a>
+				</li>
+				<li class="separator">
+					<i class="flaticon-right-arrow"></i>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'dynamic_dt' %}">Dynamic DT</a>
+				</li>
+			</ul>
+		</div>
+
+
+        
+        <div class="row">
+            <!-- [ Typography ] start -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>
+                            Available Routes - defined in <strong>settings.DYNAMIC_DATATB</strong> - Read <a target="" href="https://app-generator.dev/docs/developer-tools/dynamic-datatables.html">Documentation</a>.
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            {% for link in routes %}
+                                <li>
+                                    <a href="{% url "model_dt" link %}">{{ link }}</a>
+                                </li>    
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+{% endblock content %}
+
+
+{% block extrajs %}{% endblock extrajs %}

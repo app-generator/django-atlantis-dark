@@ -1,0 +1,456 @@
+{% load i18n static admin_atlantis %}
+<div class="sidebar-wrapper scrollbar scrollbar-inner">
+    {% if request.user.is_authenticated and not request.user.is_superuser %}
+    <div class="sidebar-content">
+        <div class="user">
+            <div class="avatar-sm float-left mr-2">
+                <img src="{% static 'assets/img/profile.jpg' %}" alt="..." class="avatar-img rounded-circle">
+            </div>
+            <div class="info">
+                <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                    <span>
+                        Hizrian
+                        <span class="user-level">Administrator</span>
+                        <span class="caret"></span>
+                    </span>
+                </a>
+                <div class="clearfix"></div>
+
+                <div class="collapse in" id="collapseExample">
+                    <ul class="nav">
+                        <li>
+                            <a href="#profile">
+                                <span class="link-collapse">My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edit">
+                                <span class="link-collapse">Edit Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#settings">
+                                <span class="link-collapse">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-primary">
+            <li class="nav-item {% if parent == 'apps' %} active{% endif %}">
+                <a data-toggle="collapse" href="#apps" class="collapsed show" aria-expanded="false">
+                    <i class="fas fa-home"></i>
+                    <p>Apps</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse {% if parent == 'apps' %} show {% endif %}" id="apps">
+                    <ul class="nav nav-collapse">
+                        <li class="{% if segment == 'dynamic_dt' %}active{% endif %}">
+                            <a href="{% url 'dynamic_dt' %}">
+                                <span class="sub-item">Dynamic Tables</span>
+                            </a>
+                        </li>
+                        <li class="{% if segment == 'dynamic_api' %}active{% endif %}">
+                            <a href="{% url 'dynamic_api' %}">
+                                <span class="sub-item">Dynamic API</span>
+                            </a>
+                        </li>
+                        <li class="{% if segment == 'charts' %}active{% endif %}">
+                            <a href="{% url 'app_charts' %}">
+                                <span class="sub-item">Charts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'dashboard' %} active{% endif %}">
+                <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+                    <i class="fas fa-home"></i>
+                    <p>Dashboard</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="dashboard">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'dashboard' %}">
+                                <span class="sub-item">Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Components</h4>
+            </li>
+            <li class="nav-item {% if active_page == 'base' %} active submenu {% endif %}">
+                <a data-toggle="collapse" href="#base" >
+                    <i class="fas fa-layer-group"></i>
+                    <p>Base</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse {% if active_page == 'base' %} show {% endif %}" id="base">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'avatars' %}">
+                                <span class="sub-item">Avatars</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'buttons' %}">
+                                <span class="sub-item">Buttons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gridsystem' %}">
+                                <span class="sub-item">Grid System</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'panels' %}">
+                                <span class="sub-item">Panels</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'notifications' %}">
+                                <span class="sub-item">Notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sweetalert' %}">
+                                <span class="sub-item">Sweet Alert</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'fontawesome' %}">
+                                <span class="sub-item">Font Awesome Icons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'simple_line_icons' %}">
+                                <span class="sub-item">Simple Line Icons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'flaticons' %}">
+                                <span class="sub-item">Flaticons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'typography' %}">
+                                <span class="sub-item">Typography</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'sidebar' %} active submenu {% endif %}">
+                <a data-toggle="collapse" href="#sidebarLayouts">
+                    <i class="fas fa-th-list"></i>
+                    <p>Sidebar Layouts</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse {% if active_page == 'sidebar' %}show {% endif %}" id="sidebarLayouts">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'sidebarone' %}">
+                                <span class="sub-item">Sidebar Style 1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sidebar_overlay' %}">
+                                <span class="sub-item">Overlay Sidebar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sidebar_compact' %}">
+                                <span class="sub-item">Compact Sidebar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sidebar_static' %}">
+                                <span class="sub-item">Static Sidebar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'icon_menu' %}">
+                                <span class="sub-item">Icon Menu</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'forms' %} active submenu {% endif %}">
+                <a data-toggle="collapse" href="#forms">
+                    <i class="fas fa-pen-square"></i>
+                    <p>Forms</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse {% if active_page == 'forms' %} show {% endif %}" id="forms">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'forms' %}">
+                                <span class="sub-item">Basic Form</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'tables' %} active submenu {% endif %}">
+                <a data-toggle="collapse" href="#tables">
+                    <i class="fas fa-table"></i>
+                    <p>Tables</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse  {% if active_page == 'tables' %} show {% endif %}" id="tables">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'tables' %}">
+                                <span class="sub-item">Basic Table</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'datatables' %}">
+                                <span class="sub-item">Datatables</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'maps' %} active submenu {% endif %}">
+                <a data-toggle="collapse" href="#maps">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Maps</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse {% if active_page == 'maps' %} show {% endif %}" id="maps">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'maps' %}">
+                                <span class="sub-item">JQVMap</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'charts' %} active submenu {% endif %}">
+                <a data-toggle="collapse" href="#charts">
+                    <i class="far fa-chart-bar"></i>
+                    <p>Charts</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse {% if active_page == 'charts' %} show {% endif %}" id="charts">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="{% url 'charts' %}">
+                                <span class="sub-item">Chart Js</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'sparkline' %}">
+                                <span class="sub-item">Sparkline</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item {% if active_page == 'widgets' %} active {% endif %}">
+                <a href="{% url 'widgets' %}">
+                    <i class="fas fa-desktop"></i>
+                    <p>Widgets</p>
+                    <span class="badge badge-success">4</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="collapse" href="#submenu">
+                    <i class="fas fa-bars"></i>
+                    <p>Menu Levels</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="submenu">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a data-toggle="collapse" href="#subnav1">
+                                <span class="sub-item">Level 1</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="subnav1">
+                                <ul class="nav nav-collapse subnav">
+                                    <li>
+                                        <a href="#">
+                                            <span class="sub-item">Level 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="sub-item">Level 2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#subnav2">
+                                <span class="sub-item">Level 1</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="subnav2">
+                                <ul class="nav nav-collapse subnav">
+                                    <li>
+                                        <a href="#">
+                                            <span class="sub-item">Level 2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sub-item">Level 1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mx-4 mt-2">
+                <a href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis" 
+                            class="btn btn-primary btn-block">
+                            <span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>See Product</a> 
+            </li>
+        </ul>
+    </div>
+    {% endif %}
+    {% if request.user.is_superuser %}
+    <div class="user">
+        <div class="avatar-sm float-left mr-2">
+            <img src="{% static 'assets/img/profile.jpg' %}" alt="..." class="avatar-img rounded-circle">
+        </div>
+        <div class="info">
+            <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                <span>
+                    Hizrian
+                    <span class="user-level">Administrator</span>
+                    <span class="caret"></span>
+                </span>
+            </a>
+            <div class="clearfix"></div>
+
+            <div class="collapse in" id="collapseExample">
+                <ul class="nav">
+                    <li>
+                        <a href="#profile">
+                            <span class="link-collapse">My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#edit">
+                            <span class="link-collapse">Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <span class="link-collapse">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="nav nav-primary">
+        <li class="nav-item {% if active_page == 'dashboard' %} active{% endif %}">
+            <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+                <i class="fas fa-home"></i>
+                <p>Dashboard</p>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse" id="dashboard">
+                <ul class="nav nav-collapse">
+                    <li>
+                        <a href="{% url 'dashboard' %}">
+                            <span class="sub-item">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item {% if active_page == 'base' %} active submenu {% endif %}">
+            <a data-toggle="collapse" href="#base" >
+                <i class="fas fa-lock"></i>
+                <p>Authentication</p>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse" id="base">
+                {% admin_get_menu as app_list %}
+                <ul class="nav nav-collapse">
+                    {% if app_list %}
+                        {% for app in app_list %}
+                        {% if app.has_perms and not app.pinned %}
+                            {% if app.models %}
+                                {% for model in app.models %}
+                                    {% if model.url %}
+                                    <li>
+                                        <a href="{{ model.url }}">
+                                        <span class="sub-item">{{ model.label }}</span>
+                                        </a>
+                                    </li>
+                                    {% else %}
+                                    <li>
+                                        <a href="#">
+                                        <span class="sub-item">{{ model.label }}</span>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </ul>                  
+             </div>
+        </li>       
+    {% endif %}
+
+    {% if not request.user.is_authenticated %}
+    <ul class="nav nav-primary">
+        <li class="nav-item {% if active_page == 'dashboard' %} active{% endif %}">
+            <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+                <i class="fas fa-home"></i>
+                <p>Dashboard</p>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse" id="dashboard">
+                <ul class="nav nav-collapse">
+                    <li>
+                        <a href="{% url 'dashboard' %}">
+                            <span class="sub-item">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item {% if active_page == 'base' %} active submenu {% endif %}">
+            <a data-toggle="collapse" href="#base" >
+                <i class="fas fa-layer-group"></i>
+                <p>Authentication</p>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse {% if active_page == 'base' %} show {% endif %}" id="base">
+                <ul class="nav nav-collapse">
+                    <li>
+                        <a href="{% url 'signup' %}">
+                            <span class="sub-item">Sign up</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">
+                            <span class="sub-item">Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>        
+    {% endif %}
+</div>
